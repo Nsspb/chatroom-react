@@ -1,16 +1,18 @@
-import './App.css';
-import {io} from "socket.io-client";
+import React from 'react'
+import Enter from './components/Enter';
+import socket from './socket';
+
+
+
 
 
 
 function App() {
-  const connectSocket = () =>{
-    io(`http://localhost:7002/`)
-  }
-  return (
-    <div className="App">
-     <button onClick={connectSocket} >Перейти</button>
-    </div>
+  
+  return ( 
+    <>
+    <Enter />
+    </>
   );
 }
 
