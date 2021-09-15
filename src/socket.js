@@ -3,7 +3,7 @@ import {io} from "socket.io-client";
 //     io(`http://localhost:7002/`)
 //   }
 
-
-  const socket = io();
+// "proxy": "http://localhost:1945",
+  const socket = io(`http://localhost:1945/`);
 //   const socket = io(`http://localhost:7002/`);
   export default socket
