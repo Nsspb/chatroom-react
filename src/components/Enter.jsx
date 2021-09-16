@@ -1,19 +1,19 @@
 import React from 'react'
 import '../css/enter.css';
-// import socket from '../socket';
+import socket from '../socket';
 import { useState } from 'react';
-import axios from 'axios'
+// import axios from 'axios'
 
 
 export default function Enter() {
     // const [roomId, setRoomId] = useState('')
     const [userName, setUserName] = useState('')
     
-    const onEnter = () =>{
-        axios.post('/rooms', {
-            userName,
-        })
-    }
+    // const onEnter = () =>{
+    //     axios.post('/rooms', {
+    //         userName,
+    //     })
+    // }
     return (
         <div className="loginContainer">
         <header className="header">
@@ -40,7 +40,7 @@ export default function Enter() {
                         <option value="Soft">Софт</option>
                  </select>
                 </div>
-                <button onClick={onEnter} className="btn" type="submit" >Перейти</button>
+                <button onClick={socket} className="btn" type="submit" >Перейти</button>
             </form>
         </main>
     </div>
